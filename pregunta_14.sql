@@ -44,3 +44,4 @@
 --  >>> Escriba su codigo a partir de este punto <<<
 --  
 
+select K0, avg(c21) from tbl1, tbl2 where c22=c13 and c13 > 400 GROUP by K0

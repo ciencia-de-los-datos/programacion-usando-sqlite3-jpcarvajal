@@ -217,7 +217,6 @@ def test_08():
     with open("pregunta_08.sql", encoding="utf-8") as file:
         query = file.read()
 
-    print(pd.read_sql_query(query, conn).to_dict())
     assert pd.read_sql_query(query, conn).to_dict() == {
         "strftime('%Y', c23)": {0: "2016", 1: "2017", 2: "2018", 3: "2019"},
         "avg(c21)": {
@@ -227,8 +226,6 @@ def test_08():
             3: 550.9985714285714,
         },
     }
-
-test_08()
 
 def test_09():
     conn, _ = load_data()
@@ -268,12 +265,12 @@ def test_12():
     conn, _ = load_data()
     with open("pregunta_12.sql", encoding="utf-8") as file:
         query = file.read()
+    print(pd.read_sql_query(query, conn).to_dict())
     assert pd.read_sql_query(query, conn).to_dict() == {
         "K0": {0: "A", 1: "B", 2: "C", 3: "D", 4: "E"},
         "MAX(c12)": {0: 938.16, 1: 999.72, 2: 822.81, 3: 756.37, 4: 832.44},
         "MIN(c12)": {0: 135.8, 1: 283.4, 2: 267.42, 3: 317.77, 4: 118.77},
     }
-
 
 def test_13():
     conn, _ = load_data()
