@@ -41,3 +41,5 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
+
+select SUBSTRING(c23,1,4), AVG(C21) FROM tbl2 GROUP BY SUBSTRING(c23,1,4)
