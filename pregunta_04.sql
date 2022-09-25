@@ -40,6 +40,4 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 -- 
-select KO, c16
-from tbl1
-where select(LEFT(c16)) = K0;
+select K0, c16 from tbl1 where c16 like K0||'%' 
