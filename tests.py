@@ -38,7 +38,6 @@ def test_03():
     with open("pregunta_03.sql", encoding="utf-8") as file:
         query = file.read()
 
-    print(pd.read_sql_query(query, conn).to_dict())
     assert pd.read_sql_query(query, conn).to_dict() == {
         "K0": {0: "A", 1: "C", 2: "E", 3: "B", 4: "E"},
         "K1": {0: 20, 1: 15, 2: 22, 3: 12, 4: 14},
@@ -54,8 +53,6 @@ def test_03():
         "c15": {0: 0.19, 1: 0.11, 2: 0.32, 3: 0.26, 4: 0.39},
         "c16": {0: "BECB", 1: "GCDD", 2: "GEFE", 3: "FCGD", 4: "EGFD"},
     }
-
-test_03()
 
 def test_04():
     conn, _ = load_data()

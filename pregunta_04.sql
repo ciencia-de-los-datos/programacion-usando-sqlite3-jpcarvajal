@@ -40,3 +40,6 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 -- 
+select KO, c16
+from tbl1
+where select(LEFT(c16)) = K0;
