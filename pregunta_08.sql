@@ -42,4 +42,4 @@
 --  >>> Escriba su codigo a partir de este punto <<<
 --
 
-select strftime('%Y', c23), AVG(C21) FROM tbl2 GROUP BY strftime('%Y', c23)
+select strftime('%Y', c23), avg(C21) FROM tbl2 GROUP BY strftime('%Y', c23)
