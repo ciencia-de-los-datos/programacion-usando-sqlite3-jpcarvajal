@@ -265,7 +265,6 @@ def test_12():
     conn, _ = load_data()
     with open("pregunta_12.sql", encoding="utf-8") as file:
         query = file.read()
-    print(pd.read_sql_query(query, conn).to_dict())
     assert pd.read_sql_query(query, conn).to_dict() == {
         "K0": {0: "A", 1: "B", 2: "C", 3: "D", 4: "E"},
         "MAX(c12)": {0: 938.16, 1: 999.72, 2: 822.81, 3: 756.37, 4: 832.44},
